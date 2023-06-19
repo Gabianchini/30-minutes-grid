@@ -1,0 +1,57 @@
+.container{
+background-color: #333;
+border: 1px solid red;
+padding: 15px;
+display: grid;
+grid-template-columns:50% auto 10% ;/*largura e quantidade das colunas, nocaso sao 3 colunas uma com 50pxoutra com largura auto e outra com 10%*/
+height:35vh;  /*tamanho do container pai*/
+grid-template-rows:70% 30%;  /*altera a altura das linhas;*/
+ /*gap:5px; espaço entre items no geral, nesse caso o espaço entre linhas e colunas tem o mesmo valormas vc pode setar seus valores individualmente com grid-row-gap e grid-column-gap */
+grid-row-gap: 15px; /* espaço entre linhas */
+grid-column-gap:10px;/*espaço entre colunas*/
+
+}
+
+.container div{
+background-color: azure;
+padding: 20px;
+border:1px solid blue;
+}
+
+/*Usando grid area no segundo layout*/
+
+.container-2{
+background-color:#333;
+padding: 15px;
+border:3px solid red;
+display: grid;
+gap:5px;
+grid-template-areas:
+ 'header header header'
+ 'content content sidebar'
+ 'footer footer footer'
+;
+}/* denomina como os items vão ser colocados na página: nesse caso, header 3 colunas,content 2 colunas, sidebar 1 coluna e footer 3 colunas*/
+
+.container-2 div{
+    background-color: aliceblue;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+#header{
+    grid-area: header;/* denomina que o item header é essa div com id header e assim por diante com os outros items*/
+}
+
+#sidebar{
+    grid-area: sidebar;
+}
+
+#content{
+    grid-area: content;
+    height: 50vh; /*altura do item content, repare que o sidebar acompanha a altura pois estao na mesma linha*/
+}
+
+#footer{
+    grid-area: footer;
+}
