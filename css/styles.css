@@ -55,3 +55,66 @@ grid-template-areas:
 #footer{
     grid-area: footer;
 }
+
+/*alinhamento*/
+
+.container-3{
+background-color:#333;
+padding: 15px;
+border:3px solid red;
+display: grid;
+grid-template-columns: auto auto auto;
+height: 50vh;
+justify-content:center;/*alinha items no eixo horizontal*/
+align-items:center;/*alinha items na vertical*/
+}
+
+.container-3 div{
+    background-color: aliceblue;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+/*alinhamento direto nos items do container*/
+.container-4{
+background-color:#333;
+padding: 15px;
+border:3px solid red;
+display: grid;
+grid-template-columns:auto auto auto;/*define o numero das colunas*/
+
+}
+
+.container-4 div{
+    background-color: aliceblue;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+#item1{
+   grid-column-start:1;/*onde o item começa*/
+   grid-column-end:4; /*onde o item acaba, coloca sempre um numero a mais pois aqui começa-se do 1 entao 3(numero de colunas)+1(numero inicial)=4*/
+}
+
+#item2{
+    grid-row-start: 2;/*quantas linhas o item vai ocupar em qual linha o item começa*/
+    grid-row-end:4;/*em qual linha o item acaba*/
+}
+
+#item3{
+    justify-self:end ;/*como o item se posiciona na horizontal*/
+    height: 200px;
+}
+
+#item5{
+    justify-self: start;
+    height:200px;
+}
+
+#item4{
+    align-self: center;
+}
+
+#item6{
+    align-self: end;
+}
